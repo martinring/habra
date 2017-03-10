@@ -1,29 +1,23 @@
-name:                Habra
+name:                habra
 version:             0.1.0.0
--- synopsis:
--- description:
+synopsis:            Habra Presentation Tool
+description:         The Habra Presentation Tool
 homepage:            https://github.com/martinring/Habra#readme
-license:             BSD3
+license:             MIT
 license-file:        LICENSE
 author:              Martin Ring
-maintainer:          example@example.com
+maintainer:          martin.ring@dfki.de
 copyright:           2017 Martin Ring
 category:            Web
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
 
-library
-  hs-source-dirs:      common
-  exposed-modules:     Lib
-  build-depends:       base >= 4.7 && < 5
-  default-language:    Haskell2010
-
-executable Habra-exe
+executable habra
   hs-source-dirs:      server
   main-is:             Main.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
-  build-depends:       base, Habra, text,
+  build-depends:       base, text, file-embed,
                        wai, wai-app-static, warp,
                        websockets, wai-websockets
   default-language:    Haskell2010
